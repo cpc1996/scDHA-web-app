@@ -1,0 +1,34 @@
+extends layout
+
+block layout-content
+
+
+  .container.wrapper
+
+    #top
+      h1 Single-cell data analysis using a hierarchical autoencoder (scDHA)
+
+    .wrapper
+      .menubar
+        ul#menulist
+          - const liStyle = {"color": "#ffffff", "text-decoration": "none"};
+
+          mixin litem(taskNum, taskName)
+            li.menuitem
+              a(href= taskNum style=liStyle)
+                div= taskName
+
+          +litem("/home", "Home")
+          +litem("/task1", "Visualization")
+          +litem("/task2", "Cell Clustering")
+          +litem("/task3", "Trajectory Inference")
+          +litem("/task4", "Cell Classification")
+
+      block main-content
+
+    #bottom
+      p Bioinformatics Lab @ Auburn University
+    
+  //- script(src="switch.js")
+  
+    

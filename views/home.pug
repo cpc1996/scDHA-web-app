@@ -1,0 +1,56 @@
+extends index 
+
+block main-content
+  style.
+    .menuitem:nth-child(1) { 
+      background-color: #04AA6D 
+    }
+
+  #main
+    h1 Welcome to scDHA
+
+    h2 About scDHA
+    p.
+      The scDHA can perform cell segregation through unsupervised learning, dimension reduction and 
+      visualization, cell classification, and time-trajectory inference on single-cell RNA sequencing data.
+    hr
+
+    h2 Introduction
+    p.
+      Advances in microfluidics and sequencing technologies have allowed us to monitor biological 
+      systems at single-cell resolution. This comprehensive decomposition of complex tissues holds 
+      enormous potential in developmental biology and clinical research. However, the ever-increasing 
+      number of cells, technical noise, and high dropout rate pose significant computational challenges 
+      in scRNA-seq analysis. To address this problem, we introduce single-cell Decomposition using 
+      Hierarchical Autoencoder (scDHA), which can efficiently detach noise from informative biological 
+      signals. The scDHA pipeline consists of two core modules. The first module is a non-negative kernel 
+      autoencoder that provides a non-negative, part-based representation of the data. Based on the weight 
+      distribution of the encoder, scDHA removes genes or components that have insignificant contributions 
+      to the representation. The second module is a Stacked Bayesian Self-learning Network that is 
+      built upon the Variational Autoencoder to project the data onto a low dimensional space. Using 
+      this informative and compact representation, many analyses can be performed with high accuracy and 
+      tractable time complexity (mostly linear or lower complexity). In one joint framework, the scDHA software 
+      package conducts cell segregation through unsupervised learning, dimension reduction and visualization, 
+      cell classification, and time-trajectory inference. 
+    hr
+
+    h2 Download
+    p.
+      The scDHA package are now available on 
+      both #[a(href="https://cran.r-project.org/web/packages/scDHA/index.html" target="_blank" rel="noopener noreferrer") #[strong CRAN]] 
+      and #[a(href="https://github.com/duct317/scDHA" target="_blank" rel="noopener noreferrer") #[strong github]].
+    hr
+
+    h2 Citation
+    p.
+      Duc Tran, Hung Nguyen, Bang Tran, Carlo La Vecchia, Hung N. Luu, Tin Nguyen (2021). 
+      Fast and precise single-cell data analysis using a hierarchical autoencoder. 
+      #[i Nature Communications], #[b 12], 1029. doi: 10.1038/s41467-021-21312-2 
+      (#[a(href="https://www.nature.com/articles/s41467-021-21312-2" rel="nofollow") link])
+    br
+
+  #sidebar 
+    h2 About our lab
+    p.
+      Please visit our 
+      #[a(href="https://tinnguyen-lab.com/home/" target="_blank" rel="noopener noreferrer") Bioinformatics Lab] for more information.

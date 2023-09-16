@@ -1,0 +1,20 @@
+{
+  "name": "scdha",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./index.js",
+    "ui": "browser-sync start --config bs-config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "express-formidable": "^1.2.0",
+    "nodemon": "^3.0.1",
+    "r-script": "^0.0.4"
+  }
+}

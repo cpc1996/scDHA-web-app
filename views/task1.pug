@@ -1,0 +1,34 @@
+extends index 
+
+block main-content
+  style.
+    .menuitem:nth-child(2) { 
+      background-color: #04AA6D 
+    }
+
+  h1 Visualizing single-cell RNA-sequence
+  
+  #sidebar
+    h3 Upload your input file
+    p.
+      #[strong Input]: A single-cell RNA-seq matrix in the format of a tab-delimited text file (tsv), 
+      and an optional metadata file in the format of a tab-delimited text file (tsv) 
+      that contains two columns: cell ID and cell type.
+
+    if !uploaded
+      form(action="/task1" enctype="multipart/form-data" method="post")
+        p 
+          input(type="file" name="upload" multiple)
+        input(type="submit" value="Upload")
+    else
+      p Your file has been successfully uploaded!
+
+  if uploaded
+    #main 
+      h3 Results 
+      img(src=ID+".jpg")
+
+    #sidebar
+      h3 Download results
+      a(href="/task1/download/"+ID target="_blank" rel="noopener noreferrer")
+        input(type="button" value="Download")
